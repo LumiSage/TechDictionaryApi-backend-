@@ -20,15 +20,13 @@ jobs:
         uses: NuGet/setup-nuget@v1.0.5
 
       - name: Restore NuGet packages
-        run: nuget restore ./TechDictionaryApi.csproj  # Replace with your actual .csproj path if different
+        run: nuget restore ./TechDictionaryApi.csproj
         working-directory: D:/a/TechDictionaryApi-backend-fork/TechDictionaryApi-backend-fork
 
-      # Use MSBuild to publish the project to a folder
       - name: Publish to folder
         run: msbuild ./TechDictionaryApi.csproj /nologo /verbosity:m /t:Publish /p:Configuration=Release /p:PublishDir="D:/a/TechDictionaryApi-backend-fork/TechDictionaryApi-backend-fork/published/"
         working-directory: D:/a/TechDictionaryApi-backend-fork/TechDictionaryApi-backend-fork
 
-      # Upload the published output as an artifact
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
