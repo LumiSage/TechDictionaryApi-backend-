@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <LangVersion>latest</LangVersion> <!-- Update to use the latest C# language version -->
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
